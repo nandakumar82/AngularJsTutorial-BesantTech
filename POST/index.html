@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app='main'>
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="index.js"></script>
+   
+</head>
+
+<body ng-controller='restex'>
+    <form novalidate name="myform">
+        <label>Id</label>
+        <input type="text" ng-model="user.id" name="id"/>
+        <br>
+        <label>name</label>
+        <input type="text" ng-model="user.name" name="title"/>
+        <br>
+        <label>salary</label>
+        <input type="text" ng-model="user.salary" name="author"/>
+        <br>
+        <input type="button" value="save" ng-click="save()">
+    </form>
+    {{user}}
+</body>
+
+</html>

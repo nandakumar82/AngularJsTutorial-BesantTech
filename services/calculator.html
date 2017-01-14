@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='main'>
+
+<head>
+    <title></title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script> -->
+    <script src="angular.min.js"></script>
+    <script src="calculatorcontroller.js"></script>
+    <script src="opservice.js"></script>
+
+   
+</head>
+
+<body ng-controller='calculator'>
+    <form novalidate name="calculator">
+        <label for="A">A</label>
+        <input type="number" ng-model="A" name="A"/>
+         <br>
+        <label for="B">B</label>
+        <input type="number" ng-model="B" name="B"/>
+        
+        <br>
+        
+        <br>
+        <input type="button"  value="add" ng-click="add()">
+        <input type="button"  value="sub" ng-click="sub()">
+        <input type="button"  value="multiply" ng-click="multiply()">
+        <input type="button"  value="divide" ng-click="divide()">
+            {{result}}
+    </form>
+
+    
+</body>
+
+</html>

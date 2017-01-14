@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='main'>
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body ng-controller='loop'>
+    <input type="checkbox" ng-model="hidesalary">Hide Salary</input>
+    <table border="">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th ng-hide="hidesalary">Salary</th>
+        </tr>
+        <tbody>
+            <tr ng-if="item.salary < 30000" ng-repeat="item in data">
+                <!-- <td>{{item.id}}	</td>
+	<td>{{item.name}}	</td>
+	<td>{{item.salary}}	</td> -->
+                <td ng-bind="item.id"></td>
+                <td ng-bind="item.name"></td>
+                <td ng-bind="item.salary" ng-hide="hidesalary"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <input type="text" ng-model="name">
+    <button ng-click="Save()">Save</button>
+    <ul>
+        <li ng-repeat="item in data">
+            {{item}}
+        </li>
+    </ul> -->
+</body>
+
+</html>

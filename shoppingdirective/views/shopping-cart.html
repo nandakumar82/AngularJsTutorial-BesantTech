@@ -1,0 +1,39 @@
+
+<span>Number of items : </span>
+<!-- <span id='itemCount'>0 </span> -->
+<span>{{itemCount}}</span>
+
+<span>Total Cost: </span>
+<!-- <span id='totalCost'>0 </span> -->
+<span>{{totalCost}}</span>
+<span>$</span>
+
+<table border="">
+    <tr>
+        <th>
+            id
+        </th>
+        <th>
+            name
+        </th>
+        <th>
+            price
+        </th>
+    </tr>
+    <tr ng-repeat="item in items">
+        <td>
+            {{item.id}}
+        </td>
+
+        <td>
+            {{item.name}}
+        </td>
+        <td>
+            {{item.price}}
+        </td>
+        <td>
+        <input type="button" ng-click="add(item)" value="AddToCart">
+        </td>
+    </tr>
+</table>
+<div ng-transclude></div>

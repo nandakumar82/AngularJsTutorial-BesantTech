@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html ng-app='main'>
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body ng-controller='restex'>
+    <table border="">
+        <tr>
+            <th>id</th>
+            <th>body</th>
+            <th>email</th>
+            <th>name</th>
+        </tr>
+        <tbody>
+            <tr ng-repeat="comment in comments">
+                <td>{{$index}}</td>
+                <td ng-bind="comment.body"></td>
+                <td ng-bind="comment.email"></td>
+                <td ng-bind="comment.name"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

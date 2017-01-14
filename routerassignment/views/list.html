@@ -1,0 +1,15 @@
+<span>{{title}}</span>
+<br>
+<table border="">
+    <tr>
+        <!-- <th>id</th> -->
+        <th>Name</th>
+    </tr>
+    <tbody>
+        <tr ng-repeat="people in peopleList">
+            <td>
+                <a href="" ng-bind="people.name" ng-click='personDetails(people.id)'></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

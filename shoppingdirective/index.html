@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html ng-app='main'>
+
+<head>
+    <title></title>
+    <script src="angular.min.js"></script>
+    <script src="index.js"></script>
+    <script src="directive/shoppingcartdirective.js"></script>
+</head>
+
+<body ng-controller='shoppingcart'>
+<input type='text' ng-model='name'/>
+    <shopping-cart items='shoppingitems'>
+    	<div> this is from {{name}}</div>
+    </shopping-cart>
+
+<!--     <parent>
+		<child>
+		</child>
+	</parent> -->
+</body>
+
+
+
+</html>
